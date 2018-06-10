@@ -1,0 +1,23 @@
+<% if !@error -%>
+  <div class="row">
+    <div class="col-12 center" id="messageDeletedNotice">
+      <h4>THIS MESSAGE HAS BEEN DELETED.</h4>
+      <h4>ONCE YOU LEAVE THIS PAGE IT WILL NO LONGER BE ACCESSIBLE.</h4>
+    </div>
+  </div>
+<% end %>
+  <div class="row">
+    <div class="col-12">
+      <h3>Message:</h3>
+      <p>
+        <%= @message_text %>
+      </p>
+    </div>
+  </div>
+<% if !@error -%>
+  <div class="row">
+    <div class="col-12 center">
+      <a href="">Select the Message</a> | <a href="">Copy to Clipboard</a>
+    </div>
+  </div>
+<% end %>

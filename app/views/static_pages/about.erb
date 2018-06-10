@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-12">
+    <h2>What is TMWSD?</h2>
+    <p>TMWSD is a secure, auto-deleted messaging service. This means two things:</p>
+    <ol>
+      <li>
+        <p>We encrypt your message before we store it.</p>
+      </li>
+      <li>
+        <p>The first time the message is retrieved we delete the encrypted content.</p>
+      </li>
+    </ol>
+    <p>
+      We didn't stop there, however. We added the ability to restrict access by password. You don't need to
+      worry about your password either, because in this case we never actually store it. Instead we hash it
+      using a heavy-duty hashing utility (bcrypt). As an added bonus, if you provide a password we salt the
+      encryption key with it for even more security. This means that without the password no one can decrypt
+      your secret message, not even us.
+    </p>
+    <p>
+      One more thing. Obviously, thismessagewillselfdestruct.com is a long domain name. So, you can use either
+      <a href = "https://tmwsd.ws/">tmwsd.ws</a> or <a href = "https://⌫.ws">⌫.ws</a> too.
+    </p>
+  </div>
+</div>

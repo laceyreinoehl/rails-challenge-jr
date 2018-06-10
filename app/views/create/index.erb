@@ -1,0 +1,27 @@
+<div>
+  <form id="submitMessage" method = "POST" action = "saveMessage">
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+    <div class="row">
+      <div class="col-12">
+        <textarea name = 'secret' cols='130' rows="10"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <label for="password">Password:</label>
+        <input name = 'pword' type="password" id="password"/>
+        <p class='smallText'>Optional. If set, your message will not be able to be retrieved without this
+          password.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-7"></div>
+      <div class="col-5">
+        <input type="checkbox" id="termsOfService"/>
+        <label for="termsOfService">* I accept the terms of service. </label>
+        <button type="submit">Save This Message</button>
+      </div>
+    </div>
+  </form>
+</div>

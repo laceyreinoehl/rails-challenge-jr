@@ -1,0 +1,17 @@
+<form id = "unlock" method = "POST" action = "unlock">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <div class="row">
+    <input type="hidden" name="idmessage" id="idmessage" value="<%= @idmessage %>"/>
+    <div class="col-12">
+      <% if @noPasswordReqd %>
+        <p>No password required. Click next to continue to message.</p>
+        <input type="hidden" name="pword" id="password" value = ""/>
+        <button type="submit">Next >></button>
+      <% elsif !@noPasswordReqd %>
+        <p>This message requires a password for access. Contact the sender if you don't already have the password.</p>
+        <input type="password" name="pword" id="password"/>
+        <button type="submit">Retrieve Message</button>
+      <% end %>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,53 @@
+<form>
+  <div class="row">
+    <div class="col">
+      <p>Your message has been saved. Create as many URLs as you need to access this message (each one can only be used
+        once). You can copy and deliver the URLs yourself or enter the recipients' names and email addresses and we'll
+        send an email for you.</p>
+      <table id = "urls">
+        <thead>
+        <tr>
+          <th>URL</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Delete?</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href = "http://localhost:3000/<%= @guuid %>">http://localhost:3000/<%= @guuid %></a>
+            </td>
+            <td>
+              <input type = "text" id = "name" name = "name"/>
+            </td>
+            <td>
+              <input type = "text" id = "email" name = "email"/>
+            </td>
+            <td>
+              Active
+            </td>
+            <td>
+              <input type = "checkbox" id = "delete" name = "delete"/>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan = "5"></td>
+          </tr>
+        </tfoot>
+      </table>
+      <a href = "" class = "floatRight">Add Another URL</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <label for="note">Note(Optional)</label>
+      <textarea id="note" cols="130" rows="5"></textarea>
+      <p class='smallText'>This note will be included in the email sent to the recipients.</p>
+      <button type = "submit" class = "floatRight">Save this Message</button>
+    </div>
+  </div>
+</form>
